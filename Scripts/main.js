@@ -129,33 +129,82 @@ for (j = 0; j < 5; j++) {
 delete prng;
 }
 
+// Encryption //
+
 function encryption1(){
+
+// Prompt //
+
 let binder123 = prompt("Encrypt Anything");
+
+// Variables //
+
 let binder321 = "";
 let binder231 = "";
 let binder213 = binder123.split(" ");
 
+// Reverse Characters //
+
 binder213.reverse();
 
+// 'For Loop' For Characters //
+
 for(let i = 0; i < binder213.length; i= i+1){
+
+// Save First Character //
+
   binder231 = binder213[i][0];
+
+// Put Spaces Between Words //
+
   binder321 += (binder213[i]).slice(1);
+
+// Adds Hashtags At The End Of The First Words //
+
   binder321 += binder231 + "##";
 }
+
+// Output //
+
 document.getElementById("panda").innerHTML = binder321;
 }
 
+// Decryption //
+
 function decryption1(){
+
+// Prompt //
+
   let binder= prompt ("Decrypt Anything");
+
+// Variables //
+
   let chef="";
     let lastcharacter="";
     let sing= binder.split(" ");
+
+// Reverse Characters //
+
     sing.reverse();
+
+// 'For Loop' For Characters //
+
     for(let i = 0 ; i < sing.length ; i=i+1){
+
+// Adds Constant to Each Word //
+
       const rednib = sing[i].length -3;
+
+// Saves The 3rd Word //
+
 lastcharacter = sing[i][rednib];
+
+// Puts Last Letter In Front Of The Word //
+
 chef += lastcharacter + (sing[i]).slice(0,-3) + " ";
     }
+
+// Output Decryption //
 
     document.getElementById("Baker").innerHTML = chef
     
