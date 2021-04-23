@@ -94,6 +94,29 @@ if (num[1] > num[2])
 }
 }
 
+function function5(){
+  let While= 0;
+let i = 0;
+  while(i<1000){
+    i++
+    if(i%3===0){
+      document.getElementById("While").innerHTML = While += i;
+    }
+  }
+}
+
+function function4(){
+  var addition = 0;
+for (var x = 0; x < 1000; x++)
+{
+  if (x % 3 === 0) 
+  {
+     addition += x;
+  }
+}
+document.getElementById("Addition").innerHTML=addition;
+}
+
 // encryption code //
 
 function Generate_key() {
